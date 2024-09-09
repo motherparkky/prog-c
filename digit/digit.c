@@ -5,7 +5,7 @@ unsigned int digit(int n, int k)
         return 0;
     }
     int div = 10;
-    for (int i = 0;  i < k - 1; i++)
+    for (int i = 0; i < k - 1; i++)
     {
         div *= 10;
     }
