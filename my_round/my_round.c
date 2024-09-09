@@ -12,7 +12,7 @@ int my_round(float n)
     }
     else
     {
-        if (dv =< -0.5)
+        if (dv <= -0.5)
         {
             return cons - 1;
         }
