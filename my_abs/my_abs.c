@@ -6,6 +6,6 @@ int my_abs(int n)
     }
     else
     {
-        return n*-1;
+        return n * -1;
     }
 }
