@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int int_palindrome(int n)
 {
     if (n < 0)
@@ -13,7 +11,7 @@ int int_palindrome(int n)
         res = n / div;
         div *= 10;
     }
-    div /= 100; //Most greatest digits
+    div /= 100;
     int k = 0;
     int div2 = 1;
     int m = n;
@@ -29,10 +27,4 @@ int int_palindrome(int n)
         return 1;
     }
     return 0;
-}
-
-int main(void)
-{
-    printf("%d", int_palindrome(8338));
-    printf("%d", int_palindrome(55));
 }
