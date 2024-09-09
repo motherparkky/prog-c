@@ -7,7 +7,7 @@ void prime_factorization(unsigned long n)
     int e = 0;
     if (temp <= 1)
     {
-        return ;
+        return;
     }
     printf("%lu = ", n);
     if (temp % 2 == 0)
@@ -23,7 +23,7 @@ void prime_factorization(unsigned long n)
         if (temp == 0)
         {
             printf("\n");
-            return ;
+            return;
         }
     }
     for (unsigned int i = 3; i < temp + 1; i += 2)
