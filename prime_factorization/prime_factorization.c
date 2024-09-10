@@ -35,15 +35,15 @@ void prime_factorization(unsigned long n)
             temp /= i;
         }
         if (even == 0 && e >= 1)
+        {
+            printf("%d^%d", i, e);
+            even = 1;
+            if (temp == 0)
             {
-                printf("%d^%d", i, e);
-                even = 1;
-                if (temp == 0)
-                {
-                    printf("\n");
-                }
-                continue;
+                printf("\n");
             }
+            continue;
+        }
         if (e != 0)
         {
             printf(" * %d^%d", i, e);
