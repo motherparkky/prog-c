@@ -1,5 +1,19 @@
 #include <stdio.h>
 
+unsigned long my_sqrt(unsigned long n)
+{
+    float temp, sqrt;
+    sqrt = n / 2;
+    temp = 0;
+    while (sqrt != temp)
+    {
+        temp = sqrt;
+        sqrt = ( n / temp + temp) / 2;
+    }
+    unsigned long ans = sqrt;
+    return ans;
+}
+
 void prime_factorization(unsigned long n)
 {
     unsigned long temp = n;
@@ -56,6 +70,10 @@ void prime_factorization(unsigned long n)
             continue;
         }
         s = 1;
+        if (i > my_sqrt(n))
+        {
+            i = n - 2;
+        }
     }
     printf("\n");
 }
