@@ -26,7 +26,7 @@ void prime_factorization(unsigned long n)
             return;
         }
     }
-    for (unsigned int i = 3; i < temp + 1; i += 2)
+    for (unsigned long i = 3; i < temp + 1; i += 2)
     {
         e = 0;
         while (temp % i == 0)
