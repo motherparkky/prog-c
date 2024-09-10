@@ -8,7 +8,7 @@ unsigned long my_sqrt(unsigned long n)
     while (sqrt != temp)
     {
         temp = sqrt;
-        sqrt = ( n / temp + temp) / 2;
+        sqrt = (n / temp + temp) / 2;
     }
     unsigned long ans = sqrt;
     return ans;
