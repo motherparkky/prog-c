@@ -26,6 +26,7 @@ void prime_factorization(unsigned long n)
             return;
         }
     }
+    int s = 1;
     for (unsigned long i = 3; i < temp + 1; i += 2)
     {
         e = 0;
@@ -36,7 +37,7 @@ void prime_factorization(unsigned long n)
         }
         if (even == 0 && e >= 1)
         {
-            printf("%d^%d", i, e);
+            printf("%lu^%d", i, e);
             even = 1;
             if (temp == 0)
             {
@@ -46,8 +47,15 @@ void prime_factorization(unsigned long n)
         }
         if (e != 0)
         {
-            printf(" * %d^%d", i, e);
+            printf(" * %lu^%d", i, e);
         }
+        if (s == 1 && i > 5)
+        {
+            s = 0;
+            i += 2;
+            continue;
+        }
+        s = 1;
     }
     printf("\n");
 }
