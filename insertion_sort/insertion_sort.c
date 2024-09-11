@@ -12,9 +12,9 @@ void insertion_sort(int array[], size_t size)
         {
             index++;
         }
-        for (size_t j = i - 1; j >= index; j--)
+        for (size_t j = i; j > index; j--)
         {
-            sorted_arr[j + 1] = sorted_arr[j];
+            sorted_arr[j] = sorted_arr[j - 1];
         }
         sorted_arr[index] = array[i];
     }
