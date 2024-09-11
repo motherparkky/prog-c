@@ -1,9 +1,10 @@
 #include <stddef.h>
 void insertion_sort(int array[], size_t size)
 {
-    int sorted_arr[size];
+    int sorted_arr[sizeof(array)];
     int index = 0;
-    for (int i = 0; i < size; i++)
+    int temp = 0;
+    for (size_t i = 0; i < size; i++)
     {
         index = 0;
         while (sorted_arr[index] < array[i])
