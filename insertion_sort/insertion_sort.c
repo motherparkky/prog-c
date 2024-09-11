@@ -4,7 +4,7 @@ void insertion_sort(int array[], size_t size)
 {
     int sorted_arr[100];
     sorted_arr[0] = array[0];
-    int index = 0;
+    size_t index = 0;
     for (size_t i = 1; i < size; i++)
     {
         index = 0;
