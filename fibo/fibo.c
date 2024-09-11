@@ -1,6 +1,6 @@
 unsigned long fibonacci(unsigned long n)
 {
-    if ( n == 0 || n == 1)
+    if (n == 0 || n == 1)
     {
         return n;
     }
