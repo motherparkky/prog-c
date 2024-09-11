@@ -10,7 +10,7 @@ unsigned int number_digits_rec(unsigned int n)
     {
         div *= 10;
         count++;
-        if( n - n % div == 0)
+        if (n - n % div == 0)
         {
             return count - 1;
         }
