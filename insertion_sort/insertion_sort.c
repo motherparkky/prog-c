@@ -2,20 +2,15 @@
 
 void insertion_sort(int array[], size_t size)
 {
-    int sorted_arr[100];
-    sorted_arr[0] = array[0];
-    size_t index = 0;
     for (size_t i = 1; i < size; i++)
     {
-        index = 0;
-        while (index < i && sorted_arr[index] < array[i])
+        int val = array[i];
+        int j = i - 1;
+        while (j >= 0 && array[j] > val)
         {
-            index++;
+            array[j + 1] = array[j];
+            j--;
         }
-        for (size_t j = i; j > index; j--)
-        {
-            sorted_arr[j] = sorted_arr[j - 1];
-        }
-        sorted_arr[index] = array[i];
+        array[j + 1] = val;
     }
 }
