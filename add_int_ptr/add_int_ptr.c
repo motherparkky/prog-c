@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stddef.h>
 int *add_int_ptr(int *a, int *b)
 {
