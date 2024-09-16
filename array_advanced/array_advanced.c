@@ -1,11 +1,11 @@
 #include "array_advanced.h"
 
-#include <stdlib.h>
 #include <stddef.h>
+#include <stdlib.h>
 
 int **one_dim_to_two_dim(int array[], size_t m, size_t n)
 {
-    int **temp = (int **)malloc(m * sizeof(int *));
+    int **temp = malloc(m * sizeof(int *));
     if (temp == NULL)
     {
         return NULL;
