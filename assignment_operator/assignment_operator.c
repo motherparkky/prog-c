@@ -35,8 +35,8 @@ int div_equal(int *a, int *b)
     {
         return 0;
     }
+    int remain = *a % *b;
     int res = *a / *b;
     *a = res;
-    int remain = *a % *b;
     return remain;
 }
