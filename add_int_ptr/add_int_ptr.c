@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stddef.h>
 int *add_int_ptr(int *a, int *b)
 {
@@ -5,9 +6,7 @@ int *add_int_ptr(int *a, int *b)
     {
         return a;
     }
-    int c = *a + *b;
+    *a = *a + *b;
 
-    int *res = &c;
-
-    return res;
+    return a;
 }
