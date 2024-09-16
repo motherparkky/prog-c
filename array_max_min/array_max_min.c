@@ -1,5 +1,7 @@
 #include "array_max_min.h"
+
 #include <stddef.h>
+
 void array_max_min(int tab[], size_t len, int *max, int *min)
 {
     if (len == 0 || tab == NULL)
