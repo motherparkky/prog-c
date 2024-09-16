@@ -12,7 +12,7 @@ int **one_dim_to_two_dim(int array[], size_t m, size_t n)
     }
     for (size_t i = 0; i < m; i++)
     {
-        temp[i] = (int *)malloc(n * sizeof(int));
+        temp[i] = malloc(n * sizeof(int));
         if (temp[i] == NULL)
         {
             for (size_t k = 0; k < i; k++)
@@ -26,7 +26,7 @@ int **one_dim_to_two_dim(int array[], size_t m, size_t n)
 
     for (size_t i = 0; i < m; i++)
     {
-        for(size_t j = 0; j < n; j++)
+        for (size_t j = 0; j < n; j++)
         {
             temp[i][j] = array[i * n + j];
         }
@@ -35,14 +35,14 @@ int **one_dim_to_two_dim(int array[], size_t m, size_t n)
 }
 int *two_dim_to_one_dim(int *array[], size_t m, size_t n)
 {
-    int *temp = (int *)malloc(m * n * sizeof(int));
+    int *temp = malloc(m * n * sizeof(int));
     if (temp == NULL)
     {
         return NULL;
     }
     for (size_t i = 0; i < m; i++)
     {
-        for(size_t j = 0; j < n; j++)
+        for (size_t j = 0; j < n; j++)
         {
             temp[i * n + j] = array[i][j];
         }
