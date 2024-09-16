@@ -1,8 +1,9 @@
+#include <stddef.f>
 void plus_equal(int *a, int *b)
 {
     if (a == NULL || b == NULL)
     {
-        return ;
+        return;
     }
     int res = *a + *b;
     *a = res;
@@ -12,7 +13,7 @@ void minus_equal(int *a, int *b)
 {
     if (a == NULL || b == NULL)
     {
-        return ;
+        return;
     }
     int res = *a - *b;
     *a = res;
@@ -22,7 +23,7 @@ void mult_equal(int *a, int *b)
 {
     if (a == NULL || b == NULL)
     {
-        return ;
+        return;
     }
     int res = *a * *b;
     *a = res;
