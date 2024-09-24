@@ -6,7 +6,7 @@ int main(void)
 
     for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
     {
-        putchat(alphabet);
+        putchar(alphabet);
 
         if (alphabet != 'z')
         {
