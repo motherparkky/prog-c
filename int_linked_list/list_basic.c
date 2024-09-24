@@ -1,4 +1,5 @@
 #include "list.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,13 +22,17 @@ size_t list_length(struct list *list)
     while (list != NULL)
     {
         length++;
-        list = list -> next;
+        list = list->next;
     }
     return length;
 }
 
 void list_print(struct list *list)
 {
+    if (list == NULL)
+    {
+        return;
+    }
     int first = 1;
     while (list != NULL)
     {
