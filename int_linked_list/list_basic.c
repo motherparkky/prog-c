@@ -2,15 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct list *list_prepend (struct list *list, int value)
+struct list *list_prepend(struct list *list, int value)
 {
     struct list *new_node = malloc(sizeof(struct list));
     if (new_node == NULL)
     {
         return NULL;
     }
-    new_node -> value = value;
-    new_node -> next = list;
+    new_node->data = value;
+    new_node->next = list;
 
     return new_node;
 }
@@ -35,8 +35,8 @@ void list_print(struct list *list)
         {
             printf(" ");
         }
-        printf("%d", list -> value);
-        list = list -> next;
+        printf("%d", list->data);
+        list = list->next;
         first = 0;
     }
     printf("\n");
@@ -44,10 +44,10 @@ void list_print(struct list *list)
 
 void list_destroy(struct list *list)
 {
-    stuct list *next_node;
+    struct list *next_node;
     while (list != NULL)
     {
-        next_node = list -> next;
+        next_node = list->next;
         free(list);
         list = next_node;
     }
