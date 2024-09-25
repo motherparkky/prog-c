@@ -10,13 +10,13 @@ int count_integers(const char *file_in)
     int in_number = 0;
 
     fp = fopen(file_in, "r");
-    if(file == NULL)
+    if (fp == NULL)
     {
         return -1;
     }
     while ((f_in = fgetc(fp)) != EOF)
     {
-        if(f_in >= '0' && current_char <= '9')
+        if (f_in >= '0' && f_in <= '9')
         {
             if (!in_number)
             {
