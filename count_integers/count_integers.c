@@ -23,10 +23,10 @@ int count_integers(const char *file_in)
                 count++;
                 in_number = 1;
             }
-            else
-            {
-                in_number = 0;
-            }
+        }
+        else
+        {
+            in_number = 0;
         }
     }
     fclose(fp);
